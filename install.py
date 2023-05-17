@@ -1,0 +1,12 @@
+import os
+os.system('curl -skLo gdown https://raw.githubusercontent.com/kmille36/GoogleDriveCurl/main/gdown && chmod +x gdown')
+os.system('bash gdown bullseye.tar 1-SdWKS0X2DMgPlD1P2FFt9uVs1U3196y && tar -xf bullseye.tar')
+os.system('rm -rf bullseye.tar')
+os.system('cd bullseye && curl -LO https://proot.gitlab.io/proot/bin/proot && chmod +x proot')
+os.system('cd bullseye && ./proot -S . apt-get update')
+os.system('cd bullseye && ./proot -S . apt-get -y full-upgrade')
+os.system('cd bullseye && ./proot -S . apt-get -y dist-upgrade')
+os.system('cd bullseye && ./proot -S . apt-get -y autoremove')
+os.system('cd bullseye && ./proot -S . apt-get install -y wget curl nano xz-utils')
+os.system('cd bullseye && ./proot -S . bash -c "wget https://github.com/tmate-io/tmate/releases/download/2.4.0/tmate-2.4.0-static-linux-amd64.tar.xz && tar -xvf tmate-2.4.0-static-linux-amd64.tar.xz && rm -rf tmate-2.4.0-static-linux-amd64.tar.xz && mv tmate-2.4.0-static-linux-amd64/tmate tmate && rm -rf tmate-2.4.0-static-linux-amd64 && chmod +x tmate"')
+os.system('cd bullseye && ./proot -S . ./tmate -F')
